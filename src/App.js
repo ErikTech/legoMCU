@@ -79,7 +79,7 @@ class DataChart extends Component {
 	render() {
 		return data.map(user => {
 			const minifigs = minifigures.map(fig =>{
-				if (fig.Number == user.Number){
+				if (fig.Number === user.Number){
 					return <div>{fig.name}</div>
 				}
 			})

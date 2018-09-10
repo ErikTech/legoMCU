@@ -1,11 +1,19 @@
 <h1>LegoMCU.com</h1>
 
 
-<div class="underline date">09/10/2018</div>
+<h2>UPDATES</h2>
+<h3>09/03/2018</h3>
 <ul>
-	<li> - Added to Github</li>
-	<li> - Made Data chart into a component that takes movie name as props</li>
-	<li> - Added Redux with simple voting example</li>
+	<li> Created App</li>
+	<li> Created Script to read from brick site</li>
+	<li> Spit out data in chart on JSON</li>
+</ul>
+
+<h3>09/10/2018</h3>
+<ul>
+	<li> Added to Github</li>
+	<li> Made Data chart into a component that takes movie name as props</li>
+	<li> Added Redux with simple voting example</li>
 </ul>
 
 <h2>TO DO</h2>
@@ -27,12 +35,3 @@
 		<input type="checkbox"/>Use Redux for state change of what content is showing
 	</li>
 </ul>
-
-<style>
-.underline{
-	text-decoration: underline;
-}
-.date{
-	font-size: 18px;
-}
-</style>
