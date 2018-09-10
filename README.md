@@ -21,17 +21,26 @@
 	<li>Create database of all necessary information:
 		<ul>
 			<li>
-				<input type="checkbox" />Minifigs
+				Minifigs
 			</li>
 			<li>
-				<input type="checkbox" /> All Movies Sets
+				 All Movies Sets
 			</li>
 		</ul>
 	</li>
 	<li>
-		<input type="checkbox" checked="checked"/>Add Redux
+		Create search by 'Sets' results Page
 	</li>
 	<li>
-		<input type="checkbox"/>Use Redux for state change of what content is showing
+		Create search by 'Minifig' results Page
+	</li>
+	<li>
+		Create search by anything results page
+	</li>
+	<li>
+		Add Router to switch between pages and to work with Redux on correct state
+	</li>
+	<li>
+		Use Redux for state change of what content is showing
 	</li>
 </ul>
