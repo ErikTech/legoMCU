@@ -59,74 +59,7 @@ class App extends Component {
 		</div>);
 	}
 }
-// class Avengers extends Component {
-// 	render() {
-//
-// 		return data.map(user => {
-// 			const minifigs = minifigures.map(fig =>{
-// 				if (fig.Number == user.Number){
-// 					return <div>{fig.name}</div>
-// 				}
-// 			})
-// 			console.log(user)
-// 			if(user.Subtheme == 'Avengers' && user.Theme != 'BrickHeadz' && user.Theme != 'Gear'){
-// 			return (
-// 						<tr key={user.SetID}>
-// 							<td>{user.index}</td>
-// 							<td>{user.SetID}</td>
-// 							<td>{user.Number}</td>
-// 							{/* <td>{user.Variant}</td> */}
-// 							{/* <td>{user.Theme}</td> */}
-// 							{/* <td>{user.Subtheme}</td> */}
-// 							<td>Year: {user.Year}</td>
-// 							<td>{user.Name}</td>
-// 							<td>Minifigs({user.Minifigs}) - {minifigs}</td>
-// 							<td>Total Pieces: {user.Pieces}</td>
-// 							<td><a target="_blank"  href={user.AmazonURL}><img className="lego-img" border="0" src={user.ImageURL} /></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=legomcu-20&l=am2&o=1&a=B006OMM8RG" width="1" height="1" border="0" alt="" />
-// 							{/* <img className="lego-img" src={user.ImageURL}/> */}
-// 						</td>
-// 							<td>UK{user.UKPrice}<br />US${user.USPrice}<br /> CA{user.CAPrice}<br /> EU{user.EUPrice}</td>
-//
-// 						</tr>
-// 			)
-// 		}
-// 		})
-// 	}
-// }
-// class Avengers2 extends Component {
-// 	render() {
-//
-// 		return data.map(user => {
-// 			const minifigs = minifigures.map(fig =>{
-// 				if (fig.Number == user.Number){
-// 					return <div>{fig.name}</div>
-// 				}
-// 			})
-// 			console.log(user)
-// 			if(user.Subtheme == 'Avengers: Age of Ultron' && user.Theme != 'BrickHeadz' && user.Theme != 'Gear'){
-// 			return (
-// 						<tr key={user.SetID}>
-// 							<td>{user.index}</td>
-// 							<td>{user.SetID}</td>
-// 							<td>{user.Number}</td>
-// 							{/* <td>{user.Variant}</td> */}
-// 							{/* <td>{user.Theme}</td> */}
-// 							{/* <td>{user.Subtheme}</td> */}
-// 							<td>Year: {user.Year}</td>
-// 							<td>{user.Name}</td>
-// 							<td>Minifigs({user.Minifigs}) - {minifigs}</td>
-// 							<td>Total Pieces: {user.Pieces}</td>
-// 							<td><a target="_blank"  href={user.AmazonURL}><img className="lego-img" border="0" src={user.ImageURL} /></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=legomcu-20&l=am2&o=1&a=B006OMM8RG" width="1" height="1" border="0" alt="" />
-// 							{/* <img className="lego-img" src={user.ImageURL}/> */}
-// 						</td>
-// 							<td>UK{user.UKPrice}<br />US${user.USPrice}<br /> CA{user.CAPrice}<br /> EU{user.EUPrice}</td>
-//
-// 						</tr>
-// 			)
-// 		}
-// 		})
-// 	}
-// }
+
 class TableLayout extends React.Component {
 	render() {
 		return (
