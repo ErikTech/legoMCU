@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import data from './data/sets.json'
 import minifigures from './data/minifigs.json'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+// import StuffList from './StuffList';
+
 
 
 import logo from './logo.svg';
@@ -22,6 +25,7 @@ class App extends Component {
 				</table>
 			</div> */}
 
+			{/* <StuffList /> */}
 			<div>
 					<TableLayout subtheme="Avengers"></TableLayout>
 					<TableLayout subtheme="Iron Man 3"></TableLayout>
@@ -50,12 +54,12 @@ class App extends Component {
 				</table>
 			</div> */}
 
-			<div>
+			{/* <div>
 				<h2> All Results</h2>
 				<table className="info">
 					<FullDataList></FullDataList>
 				</table>
-			</div>
+			</div> */}
 		</div>);
 	}
 }
@@ -81,8 +85,8 @@ class DataChart extends Component {
 					return <div>{fig.name}</div>
 				}
 			})
-			console.log(this.props.subtheme)
-			if(user.Subtheme == this.props.subtheme && user.Theme != 'BrickHeadz' && user.Theme != 'Gear'){
+			// console.log(this.props.subtheme)
+			if(user.Subtheme === this.props.subtheme && user.Theme !== 'BrickHeadz' && user.Theme !== 'Gear'){
 			return (
 						<tr key={user.SetID}>
 							{/* <td>{user.index}</td> */}
@@ -104,31 +108,31 @@ class DataChart extends Component {
 		})
 	}
 }
-class FullDataList extends Component {
-	render() {
-
-		return data.map(user => {
-
-			if(user.Theme != 'BrickHeadz' && user.Theme != 'Gear'){
-			return (
-						<tr key={user.SetID}>
-							<td>{user.index}</td>
-							<td>{user.SetID}</td>
-							<td>{user.Number}</td>
-							{/* <td>{user.Variant}</td> */}
-							<td>{user.Theme}</td>
-							<td>{user.Subtheme}</td>
-							<td>{user.Year}</td>
-							<td>{user.Name}</td>
-							<td>{user.Minifigs}</td>
-							<td>{user.Pieces}</td>
-							<td><img className="lego-img" src={user.ImageURL}/></td>
-							<td>UK{user.UKprice} -US${user.USPrice} - CA{user.CAPrice} - EU{user.EUPrice}</td>
-
-						</tr>
-			)
-		}
-		})
-	}
-}
+// class FullDataList extends Component {
+// 	render() {
+//
+// 		return data.map(user => {
+//
+// 			if(user.Theme != 'BrickHeadz' && user.Theme != 'Gear'){
+// 			return (
+// 						<tr key={user.SetID}>
+// 							<td>{user.index}</td>
+// 							<td>{user.SetID}</td>
+// 							<td>{user.Number}</td>
+// 							{/* <td>{user.Variant}</td> */}
+// 							<td>{user.Theme}</td>
+// 							<td>{user.Subtheme}</td>
+// 							<td>{user.Year}</td>
+// 							<td>{user.Name}</td>
+// 							<td>{user.Minifigs}</td>
+// 							<td>{user.Pieces}</td>
+// 							<td><img className="lego-img" src={user.ImageURL}/></td>
+// 							<td>UK{user.UKprice} -US${user.USPrice} - CA{user.CAPrice} - EU{user.EUPrice}</td>
+//
+// 						</tr>
+// 			)
+// 		}
+// 		})
+// 	}
+// }
 export default App;
