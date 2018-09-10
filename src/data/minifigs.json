@@ -1,0 +1,32 @@
+[
+	{
+		"name" : "Thor",
+		"Number" : "30163",
+		"movie" : "Avengers",
+		"type": "Hero"
+	},
+	{
+		"name" : "Loki",
+		"Number" : "6867",
+		"movie" : "Avengers",
+		"type": "Villain"
+	},
+	{
+		"name" : "Captain America",
+		"Number" : "6865",
+		"movie" : "Avengers",
+		"type": "Hero"
+	},
+	{
+		"name" : "Chitauri General",
+		"Number" : "6865",
+		"movie" : "Avengers",
+		"type": "basic"
+	},
+	{
+		"name" : "Chitauri Foot Soldier",
+		"Number" : "6865",
+		"movie" : "Avengers",
+		"type": "basic"
+	}
+]
