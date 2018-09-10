@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import data from './data/sets.json'
 import minifigures from './data/minifigs.json'
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-// import StuffList from './StuffList';
+import { voteAngular, voteReact, voteVuejs } from './actions'
+import Results from './components/results';
 
 
 
@@ -11,22 +11,33 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+	constructor(props) {
+		super(props);
+		this.store = this.props.store;
+	}
+	handleVoteAngular = () => {
+		this.store.dispatch(voteAngular());
+	}
+	handleVoteReact = () => {
+		this.store.dispatch(voteReact());
+	}
+	handleVoteVuejs = () => {
+		this.store.dispatch(voteVuejs());
+	}
 	render() {
 		return (<div className="App">
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo"/>
 				<h1 className="App-title">LegoMCU.com</h1>
+
 			</header>
 
-			{/* <div>
-				<h2>Avengers</h2>
-				<table className="info">
-					<Avengers></Avengers>
-				</table>
-			</div> */}
 
-			{/* <StuffList /> */}
 			<div>
+					<div onClick={this.handleVoteAngular}>Angular</div>
+					<div onClick={this.handleVoteReact}>React</div>
+					<div onClick={this.handleVoteVuejs}>Vue</div>
+					<Results store={this.store}/>
 					<TableLayout subtheme="Avengers"></TableLayout>
 					<TableLayout subtheme="Iron Man 3"></TableLayout>
 					<TableLayout subtheme="Guardians of the Galaxy"></TableLayout>
@@ -39,20 +50,7 @@ class App extends Component {
 					<TableLayout subtheme="Black Panther"></TableLayout>
 					<TableLayout subtheme="Avengers: Infinity War"></TableLayout>
 
-
-
-
-
-
-
 			</div>
-
-			{/* <div>
-				<h2>Avengers: Age of Ultron</h2>
-				<table className="info">
-					<Avengers2></Avengers2>
-				</table>
-			</div> */}
 
 			{/* <div>
 				<h2> All Results</h2>
