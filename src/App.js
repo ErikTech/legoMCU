@@ -1,29 +1,53 @@
 import React, {Component} from 'react';
-import data from './data/sets.json'
-import minifigures from './data/minifigs.json'
+// import {connect} from 'react-redux';
+// import chooseMinifig from './actions/choose_minifig'
+import MoviesList from './components/moviesList'
+import DataChart from './components/DataChart'
+import TestResults from './components/testresults'
+
+import ChooseItem from './containers/ChooseItem'
+
+
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { voteAngular, voteReact, voteVuejs } from './actions'
-import Results from './components/results';
+// import { voteAngular, voteReact, voteVuejs } from './actions/index'
+// import {bindActionCreators} from 'redux';
+// import Results from './components/results';
 
 
 
 import logo from './logo.svg';
 import './App.css';
+import './index.css';
+
+
+
 
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.store = this.props.store;
+
+		// const minifig = {
+		// 	name: ''
+		// }
+		// this.handleCharClick = this.handleCharClick.bind(this);
+
 	}
-	handleVoteAngular = () => {
-		this.store.dispatch(voteAngular());
-	}
-	handleVoteReact = () => {
-		this.store.dispatch(voteReact());
-	}
-	handleVoteVuejs = () => {
-		this.store.dispatch(voteVuejs());
-	}
+	// handleVoteAngular = () => {
+	// 	this.store.dispatch(voteAngular());
+	// }
+	// handleVoteReact = () => {
+	// 	this.store.dispatch(voteReact());
+	// }
+	// handleVoteVuejs = () => {
+	// 	this.store.dispatch(voteVuejs());
+	// }
+	// handleCharClick = (name) => {
+	// 	const minifig = {
+	// 		name: name
+	// 	}
+	// 	this.props.chooseMinifig(minifig);
+	//
+	// }
 	render() {
 		return (<div className="App">
 			<header className="App-header">
@@ -31,24 +55,25 @@ class App extends Component {
 				<h1 className="App-title">LegoMCU.com</h1>
 
 			</header>
+			<div>
+				<ChooseItem />
+				<TestResults />
+
+			</div>
 
 
 			<div>
-					<div onClick={this.handleVoteAngular}>Angular</div>
+					{/* <div onClick={this.handleVoteAngular}>Angular</div>
 					<div onClick={this.handleVoteReact}>React</div>
-					<div onClick={this.handleVoteVuejs}>Vue</div>
-					<Results store={this.store}/>
-					<TableLayout subtheme="Avengers"></TableLayout>
-					<TableLayout subtheme="Iron Man 3"></TableLayout>
-					<TableLayout subtheme="Guardians of the Galaxy"></TableLayout>
-					<TableLayout subtheme="Avengers: Age of Ultron"></TableLayout>
-					<TableLayout subtheme="Captain America: Civil War"></TableLayout>
-					<TableLayout subtheme="Guardians of the Galaxy Vol. 2"></TableLayout>
-					<TableLayout subtheme="Ant-Man"></TableLayout>
-					<TableLayout subtheme="Spider-Man: Homecoming"></TableLayout>
-					<TableLayout subtheme="Thor: Ragnarok"></TableLayout>
-					<TableLayout subtheme="Black Panther"></TableLayout>
-					<TableLayout subtheme="Avengers: Infinity War"></TableLayout>
+					<div onClick={this.handleVoteVuejs}>Vue</div> */}
+					{/* <div onClick={this.handleCharClick('Thor')}>Thor</div>
+					<div onClick={this.handleCharClick('Iron Man')}>Iron Man</div>
+					<div>{this.props.minifig.name}</div> */}
+					<MoviesList />
+					<DataChart />
+
+					{/* <Results store={this.store}/> */}
+
 
 			</div>
 
@@ -62,50 +87,6 @@ class App extends Component {
 	}
 }
 
-class TableLayout extends React.Component {
-	render() {
-		return (
-			<div>
-				<h2>{this.props.subtheme}</h2>
-				<table className="info">
-					<tbody>
-						<DataChart subtheme={this.props.subtheme}></DataChart>
-					</tbody>
-				</table>
-			</div>);
-	}
-}
-class DataChart extends Component {
-	render() {
-		return data.map(user => {
-			const minifigs = minifigures.map(fig =>{
-				if (fig.Number === user.Number){
-					return <div>{fig.name}</div>
-				}
-			})
-			// console.log(this.props.subtheme)
-			if(user.Subtheme === this.props.subtheme && user.Theme !== 'BrickHeadz' && user.Theme !== 'Gear'){
-			return (
-						<tr key={user.SetID}>
-							{/* <td>{user.index}</td> */}
-							<td>ID: {user.SetID}</td>
-							<td>#{user.Number}</td>
-							{/* <td>{user.Variant}</td> */}
-							{/* <td>{user.Theme}</td> */}
-							{/* <td>{user.Subtheme}</td> */}
-							<td>Year: {user.Year}</td>
-							<td>{user.Name}</td>
-							<td>Minifigs({user.Minifigs}) - {minifigs}</td>
-							<td>Total Pieces: {user.Pieces}</td>
-							<td><a target="_blank"  href={user.AmazonURL}><img className="lego-img" border="0" src={user.ImageURL} /></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=legomcu-20&l=am2&o=1&a=B006OMM8RG" width="1" height="1" border="0" alt="" /></td>
-							<td>UK{user.UKPrice}<br />US${user.USPrice}<br /> CA{user.CAPrice}<br /> EU{user.EUPrice}</td>
-						</tr>
-
-			)
-		}
-		})
-	}
-}
 // class FullDataList extends Component {
 // 	render() {
 //
@@ -133,4 +114,16 @@ class DataChart extends Component {
 // 		})
 // 	}
 // }
-export default App;
+
+// const mapStateToProps = (state) => {
+//   return {
+// 		minifig: 'Thor'
+// 	}
+// }
+// //connects redux actions to props
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators({
+//     chooseMinifig: chooseMinifig,
+//   }, dispatch);
+// }
+export default (App);

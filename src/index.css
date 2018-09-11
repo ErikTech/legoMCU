@@ -16,3 +16,28 @@ table.info td{
 .lego-img{
   max-width: 100px;
 }
+
+
+/* Movie List styles */
+.movieList{
+	margin: 0 auto;
+	background-color: black;
+	list-style: none;
+	padding: 0;
+}
+.movieListItem a{
+  padding: 30px;
+  color: #fff;
+  border: 1px solid #444;
+  clear: both;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+.movieListItem a:hover{
+	color: red;
+}
+.movieListItem a:visited{
+	opacity: 0.8;
+  text-decoration: underline;
+}
