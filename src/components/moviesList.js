@@ -6,11 +6,10 @@ import MoviesInfoPage from '../pages/Movies/movie-info';
 
 
 
-function Movies ({ match }) {
+function Movies () {
   return (
     <div>
-      <h1>Movies</h1>
-      <ul>
+
 			{ MoviesData.map(movie => {
 			// let movieFullURL = ("/movies/" + movie.slug)
 
@@ -18,26 +17,23 @@ function Movies ({ match }) {
 			// 	pathname: movieFullURL,
 			// 	param1: movie.name
 			// }
-
-			return (
-				<li className="movieListItem" key={movie.name}>
-					<Link to={{
-						pathname: `/movies/${movie.slug}`,
-						state: {
-								movie: movie
-						}
-					}}>
-					{movie.name}
-				</Link>
-			</li>
-			)
+			if (movie.sets.length != 0){
+				return (
+					<li className="movieListItem" key={movie.name}>
+						<Link to={{
+							pathname: `/movies/${movie.slug}`,
+							state: {
+									movie: movie
+							}
+						}}>
+						{movie.name}
+					</Link>
+				</li>
+				)
+			}
 		}
 	)}
-      </ul>
 
-      <hr />
-
-      <Route path={`/movies/:movieSlug`} component={MoviesInfoPage}/>
     </div>
   )
 }
@@ -46,10 +42,12 @@ class MoviesList extends Component {
 
 	render() {
 		return (
+			<div className="movieContainer">
 			<ul className="movieList">
 				<Movies/>
-
 			</ul>
+			<Route path={`/movies/:movieSlug`} component={MoviesInfoPage}/>
+			</div>
 		)
 	}
 }

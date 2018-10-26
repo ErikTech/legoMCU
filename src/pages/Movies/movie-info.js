@@ -6,18 +6,19 @@ import { withRouter } from 'react-router-dom';
 // Movies page component
  class MoviesInfo extends Component {
    componentDidMount(){
-     // const {name} = this.props.match.params
      // const Xxx = this.props.location.state.movie.name
      console.log(this.props);
    }
   // render
   render() {
+    const theSets = this.props.location.state.movie.sets
+    console.log(theSets)
 
     return (
       <div>
         <h1>{ this.props.location.state.movie.name }</h1>
         <ul>
-        { this.props.location.state.movie.sets.map(set => {
+        { theSets.map((set, index) => {
         // let movieFullURL = ("/movies/" + movie.slug)
 
         // const newTo = {
@@ -26,7 +27,7 @@ import { withRouter } from 'react-router-dom';
         // }
 
         return (
-          <li className="movieListItem" key={set.name}>
+          <li className="movieListItem" key={index}>
             <div><a href={set.amazon_url}>{set.name} - {set.product_id}</a></div>
             <ul>{set.minifigures.map((minifig, index) => {
               return(
@@ -48,7 +49,7 @@ import { withRouter } from 'react-router-dom';
 class MoviesInfoPage extends Component {
 	render() {
 		return (
-			<ul className="movieList">
+			<ul className="moviesInfo">
 				<MoviesInfo location={this.props.location} {...this.props} />
 			</ul>
 		)
