@@ -1,1 +1,0 @@
-export const CHOOSE_MINIFIG = 'CHOOSE_MINIFIG';

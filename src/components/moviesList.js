@@ -1,29 +1,42 @@
 import React, { Component } from 'react';
-import MoviesData from '../data/movies.json'
+import MoviesData from '../data/movies-test.json'
+import { Link } from "react-router-dom";
 
 
 class Movies extends Component {
+
 	render() {
-		return MoviesData.map(movie => {
-			// console.log(movie, MoviesData)
+		return (
+			<div>
+			{ MoviesData.map(movie => {
+			let movieFullURL = ("/movies/" + movie.slug)
+
+			// const newTo = {
+			// 	pathname: movieFullURL,
+			// 	param1: movie.name
+			// }
+
 			return (
-				<li className="movieListItem" key={movie.name}><a href="">{movie.name}</a></li>
+				<li className="movieListItem" key={movie.name}>
+					<Link to={movieFullURL}>
+					{movie.name}
+				</Link>
+
+
+			</li>
 			)
-		})
+		})}
+	</div>
+)
 	}
 }
 
 class MoviesList extends Component {
-	constructor(props) {
-		super(props);
-		this.store = this.props.store;
-		console.log(this.store)
-	}
-
 	render() {
 		return (
 			<ul className="movieList">
 				<Movies />
+
 			</ul>
 		)
 	}
