@@ -1,5 +1,5 @@
 import React from "react";
-import MoviesList from "../../components/MoviesList.js"
+import MoviesList from "../../components/moviesList.js"
 
 // Movies page component
 export default class MoviesPage extends React.Component {
