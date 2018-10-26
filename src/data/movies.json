@@ -1,0 +1,183 @@
+[
+	{
+		"name": "Iron Man",
+		"slug": "iron_man",
+		"year": "2008",
+		"sets": [
+							{
+								"name": "Iron Man Extremis Sea Port Battle",
+								"product_id" : "76006",
+								"minifigures" : ["Iron Man, Mark 42 Armor", "War Machine", "Aldrich Killian"],
+								"pieces" : "195",
+								"amazon_url" : "https://www.amazon.com/LEGO-Super-Heroes-Extremis-Battle/dp/B00ATX7IDA"
+							},
+							{
+								"name": "Iron Man Malibu Mansion Attack",
+								"product_id" : "76007",
+								"minifigures" : ["Tony Stark", "Iron Man Mark 42 Armor", "Pepper Potts", "Mandarin", "Extremis soldier"],
+								"pieces" : "364",
+								"amazon_url" : "https://smile.amazon.com/LEGO-Heroes-Malibu-Mansion-76007/dp/B0094J5L7U/ref=sr_1_2?s=toys-and-games&ie=UTF8&qid=1540516952&sr=1-2&keywords=lego+Malibu+mansion+attack+76007"
+							},
+							{
+								"name": "Iron Man vs. The Mandarin Ultimate Showdown",
+								"product_id" : "76008",
+								"minifigures" : ["Iron Man Heartbreaker Armor", "Mandarin"],
+								"pieces" : "91",
+								"amazon_url" : "https://smile.amazon.com/LEGO-Heroes-Mandarin-Ultimate-Showdown/dp/B00ATX7IDU/ref=sr_1_1?s=toys-and-games&ie=UTF8&qid=1540516983&sr=1-1&keywords=Iron+man+vs+mandarin+showdown+76008"
+							}
+			]
+
+	},
+	{
+		"name": "The Incredible Hulk",
+		"slug": "the_incredible_hulk",
+		"year": "2008",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Iron Man 2",
+		"slug": "iron_man_2",
+		"year": "2010",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Thor",
+		"slug": "thor",
+		"year": "2011",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Captain America: The First Avenger",
+		"slug": "captain_america_the_first_avenger",
+		"year": "2011",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Marvel's The Avengers",
+		"slug": "the_avengers",
+		"year": "2012",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Iron Man 3",
+		"slug": "iron_man_3",
+		"year": "2013",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Thor: The Dark World",
+		"slug": "thor_the_dark_world",
+		"year": "2013",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Captain America: The Winter Soldier",
+		"slug": "captain_america_the_winter_soldier",
+		"year": "2014",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Guardians of the Galaxy",
+		"slug": "guardians_of_the_galaxy",
+		"year": "2014",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Avengers: Age of Ultron",
+		"slug": "avengers_age_of_ultron",
+		"year": "2015",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Ant-Man",
+		"slug": "ant_man",
+		"year": "2015",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Captain America: Civil War",
+		"slug": "captain_america_civil_war",
+		"year": "2016",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Doctor Strange",
+		"slug": "doctor_strange",
+		"year": "2016",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Guardians of the Galaxy Vol. 2",
+		"slug": "guardians_of_the_galaxy_vol_2",
+		"year": "2017",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Spider-Man: Homecoming",
+		"slug": "spider_man_homecoming",
+		"year": "2017",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Thor: Ragnarok",
+		"slug": "thor_ragnarok",
+		"year": "2017",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Black Panther",
+		"slug": "black_panther",
+		"year": "2018",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Avengers: Infinity War",
+		"slug": "avengers_infinity_war",
+		"year": "2018",
+		"sets": {
+
+		}
+	},
+	{
+		"name": "Ant-Man and the Wasp",
+		"slug": "ant_man_and_the_wasp",
+		"year": "2018",
+		"sets": {
+
+		}
+	}
+]
